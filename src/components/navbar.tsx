@@ -9,14 +9,14 @@ export default function Navbar () {
   return (
     <>
       <nav className='w-screen h-[10%] fixed flex bg-[#0b532a]'>
-        <div className='w-3/6 h-full text-center flex items-center justify-end'> <Image src='/logo.webp' width={120} height={60} alt='strong de la empresa logo' /></div>
+        <div className='w-3/6 h-full text-center flex items-center justify-end'> <Image src='/StromLogo.webp' width={120} height={60} alt='strong de la empresa logo' /></div>
         <div className='w-3/6 h-full flex items-center justify-end'><AiOutlineMenu size={20} color='white' className='m-4' /></div>
       </nav>
       <nav className='w-screen'>
         {/* DESKTOP  */}
         <div className='w-full h-[10%] bg-[#0F783D] text-white text-sm shadow-sm shadow-green-950 fixed z-20 hidden sm:flex'>
           {/* LOGO */}
-          <div className='w-1/5 text-center flex items-center justify-end'> <Image src='/logo.webp' width={120} height={60} alt='strong de la empresa logo' className='m-4' /></div>
+          <div className='w-1/5 text-center flex items-center justify-end'> <Image src='/StromLogo.webp' width={120} height={60} alt='strong de la empresa logo' className='m-4' /></div>
           <div className='w-2/5 grid items-center'>
             <ul className='flex justify-stretch h-full'>
               {/* COMPLETE LIST */}
