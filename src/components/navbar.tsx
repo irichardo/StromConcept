@@ -3,14 +3,38 @@ import Image from 'next/image'
 import { NavbarList } from './libs/navbarList'
 import { BsSearch } from 'react-icons/bs'
 import { AiOutlineMenu } from 'react-icons/ai'
+import { useState } from 'react'
 import Link from 'next/link'
 
 export default function Navbar () {
+  const [navbarOn,setNatBar] = useState(false)
+  const navbarHandler = () =>{
+    setNatBar(!navbarOn)
+  }
+
+  const navbarClose = () =>{
+    setNatBar(false)
+  }
   return (
     <>
-      <nav className='w-screen h-[10%] fixed flex bg-[#0b532a]'>
+      <nav className='w-screen h-[10%] fixed flex bg-[#0b532a] sm:hidden z-20'>
         <div className='w-3/6 h-full text-center flex items-center justify-end'> <Image src='/StromLogo.webp' width={120} height={60} alt='strong de la empresa logo' /></div>
-        <div className='w-3/6 h-full flex items-center justify-end'><AiOutlineMenu size={20} color='white' className='m-4' /></div>
+        <div className='w-3/6 h-full flex items-center justify-end'><AiOutlineMenu size={20} color='white' className='m-4' onClick={navbarHandler} /></div>
+        <ul className={`w-4/5 absolute right-0 h-screen bg-[#108041] flex flex-col justify-center items-center ${navbarOn?'':'deactivate'} ease-in-out transition-transform animationNavbar`}>
+          <button type='button' className='absolute right-0 top-0 m-4 text-2xl text-yellow-300' onClick={navbarClose}> X </button>
+          {
+            NavbarList.map(a=>{
+              return(
+                <li key={a} className='w-full h-1/6 flex items-center justify-center text-white'>
+                  <button className='w-full h-full' onClick={navbarClose}>
+                  {a}
+                  </button>
+                  </li>
+              )
+            })
+          }
+        </ul>
+
       </nav>
       <nav className='w-screen'>
         {/* DESKTOP  */}

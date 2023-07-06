@@ -15,3 +15,12 @@ img{
   -webkit-user-drag: none;
   user-select: none;
 }
+
+.animationNavbar{
+  transition: transform 0.3s cubic-bezier(0, 0, 0.27, 1);
+  transform: translateX(0);
+}
+
+.animationNavbar.deactivate{
+  transform: translateX(100%);
+}
