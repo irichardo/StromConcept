@@ -24,6 +24,8 @@ export default function Promo () {
   const [actualCard, SetCard] = useState(0)
 
   const handlerCarousel = (props:any) => {
+    if(props.target.value === 'more' && actualCard===data.length-1)SetCard(0)
+    if(props.target.value === 'less' && actualCard===0)SetCard(data.length-1)
     if (props.target.value === 'more' && actualCard < data.length - 1) {
       SetCard(actualCard + 1)
     }
