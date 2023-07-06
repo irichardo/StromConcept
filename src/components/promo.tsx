@@ -1,7 +1,7 @@
 'use client'
 import PromoComp from './utils/promocomp'
 import React, { useState } from 'react'
-import { CgPerformance } from 'react-icons/Cg'
+// import { CgPerformance } from 'react-icons/Cg'
 import { BiSolidTimeFive } from 'react-icons/bi'
 import { MdOutlineSavings, MdEnergySavingsLeaf } from 'react-icons/md'
 import { BsTools, BsLightbulb, BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs'
@@ -12,7 +12,8 @@ const imageSettings = {
   color: 'green'
 }
 /* Todos los elementos utilizados en la generacion mapeada de Las cards */
-const data = [{ id: 17, characteristic: 'mayor eficiencia energetica', image: <CgPerformance size={imageSettings.size} color={imageSettings.color} /> },
+const data = [
+  // { id: 17, characteristic: 'mayor eficiencia energetica', image: <CgPerformance size={imageSettings.size} color={imageSettings.color} /> },
   { id: 15, characteristic: 'Mayor vida util', image: <BiSolidTimeFive size={imageSettings.size} color={imageSettings.color} /> },
   { id: 1, characteristic: 'Mayor ahorro energetico', image: <MdOutlineSavings size={imageSettings.size} color={imageSettings.color} /> },
   { id: 2, characteristic: 'Cero mantenimiento', image: <BsTools size={imageSettings.size} color={imageSettings.color} /> },
